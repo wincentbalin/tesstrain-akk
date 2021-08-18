@@ -6,7 +6,7 @@ LANG=akk
 HEADCOUNT=5
 IMGEXT=png
 
-rm data/$LANG/tessdata_fast/*.traineddata data/$LANG/tessdata_best/*.traineddata
+rm -f data/$LANG/tessdata_fast/*.traineddata data/$LANG/tessdata_best/*.traineddata
 ls -t data/$LANG/checkpoints/*.checkpoint | head -$HEADCOUNT > tmpcheckpoints
 CHECKPOINT_FILES=tmpcheckpoints
 while IFS= read -r TESTCHECK
