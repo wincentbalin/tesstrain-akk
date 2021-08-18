@@ -15,7 +15,7 @@ cd $SCRIPTPATH
 rm -rf data/$MODEL
 mkdir data/$MODEL
 ls -1  $GTDIR/*/*.lstmf > /tmp/$MODEL-all-lstmf
-python shuffle.py < /tmp/$MODEL-all-lstmf > $SCRIPTPATH/data/$MODEL/all-lstmf
+python3 shuffle.py < /tmp/$MODEL-all-lstmf > $SCRIPTPATH/data/$MODEL/all-lstmf
 for f in $GTDIR/*/*.gt.txt; do cat "${f}"; echo; done  > $SCRIPTPATH/data/$MODEL/all-gt
 
 cd  $SCRIPTPATH/data/$MODEL

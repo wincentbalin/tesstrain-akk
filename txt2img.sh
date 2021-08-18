@@ -12,7 +12,7 @@ linecount=$(wc -l < "$traininginput")
 perfontcount=$(( linecount / fontcount))
 trainingtext=/tmp/$MODEL-train.txt
 fonttext=/tmp/$MODEL-kraken-train
-python shuffle.py <  ${traininginput}  > ${trainingtext} 
+python3 shuffle.py <  ${traininginput}  > ${trainingtext} 
 mkdir -p $GTDIR
  while IFS= read -r fontname
      do
