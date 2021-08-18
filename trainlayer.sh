@@ -25,7 +25,7 @@ sed -e "s/^/$Version_Str/" $SCRIPTPATH/data/$STARTMODEL/$STARTMODEL.version > $M
 
 cd ../..
 
-nohup make  training  \
+make training  \
 MODEL_NAME=$MODEL  \
 LANG_TYPE=Indic \
 BUILD_TYPE=$BUILDTYPE  \
