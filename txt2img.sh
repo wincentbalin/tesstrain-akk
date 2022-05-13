@@ -5,8 +5,8 @@
 MODEL=akk
 GTDIR=gt
 unicodefontdir=/home/ubuntu/.fonts/$MODEL
-traininginput=langdata/$MODEL.training_text
-fontlist=langdata/$MODEL.fontslist.txt
+traininginput=langdata_lstm/$MODEL/$MODEL.training_text
+fontlist=$MODEL.fontslist.txt
 fontcount=$(wc -l < "$fontlist")
 linecount=$(wc -l < "$traininginput")
 perfontcount=$(( linecount / fontcount))

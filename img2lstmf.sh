@@ -7,7 +7,7 @@ SCRIPTPATH=`pwd`
 MODEL=akk
 FONTS=akk
 GTDIR=gt
-fontlist=langdata/$FONTS.fontslist.txt
+fontlist=$FONTS.fontslist.txt
 while IFS= read -r fontname
      do
         prefix=$GTDIR/*${fontname// /_}

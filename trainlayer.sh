@@ -19,7 +19,7 @@ python3 shuffle.py < /tmp/$MODEL-all-lstmf > $SCRIPTPATH/data/$MODEL/all-lstmf
 for f in $GTDIR/*/*.gt.txt; do cat "${f}"; echo; done  > $SCRIPTPATH/data/$MODEL/all-gt
 
 cd  $SCRIPTPATH/data/$MODEL
-cp $SCRIPTPATH/langdata/$MODEL.config $SCRIPTPATH/langdata/$MODEL.punc  $SCRIPTPATH/langdata/$MODEL.numbers  $SCRIPTPATH/langdata/$MODEL.wordlist ./ 
+cp $SCRIPTPATH/$MODEL.config $SCRIPTPATH/langdata_lstm/$MODEL/$MODEL.punc  $SCRIPTPATH/langdata_lstm/$MODEL/$MODEL.numbers  $SCRIPTPATH/langdata_lstm/$MODEL/$MODEL.wordlist ./
 Version_Str="$MODEL:shreeshrii`date +%Y%m%d`:from:"
 sed -e "s/^/$Version_Str/" $SCRIPTPATH/data/$STARTMODEL/$STARTMODEL.version > $MODEL.version
 
@@ -36,4 +36,4 @@ LAYER_NET_SPEC="[Lfx 96 O1c1]" \
 LAYER_APPEND_INDEX=5 \
 RATIO_TRAIN=0.90 \
 DEBUG_INTERVAL=-1 \
-MAX_ITERATIONS=5000000 > trainlayer-$MODEL.log & 
+MAX_ITERATIONS=5000000 > trainlayer-$MODEL.log &
